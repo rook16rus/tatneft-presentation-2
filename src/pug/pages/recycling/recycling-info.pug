@@ -1,0 +1,41 @@
+-
+  const features = [
+    {
+      img: "recycling-features-1.svg",
+      title: "отказ от захоронения отходов композитов"
+    },
+    {
+      img: "recycling-features-2.svg",
+      title: "организация производства стеклопластиковых изделий по замкнутому циклу"
+    },
+    {
+      img: "recycling-features-3.svg",
+      title: "Значимый экономический и экологический вклад от вовлечения переработанных композитов в новые продукты"
+    },
+  ]
+
+-
+  const numbers = [
+    {
+      number: "до 12 млн. ₽",
+      desc: "Экономический эффект на предприятии Татнефть-Пресскомпозит в год"
+    },
+    {
+      number: "до 30%",
+      desc: "снижение углеродного следа, т.к. увеличится количество производимой продукции при тех же объемах вовлечения сырья"
+    },
+  ]
+
+section.recycling-info.page-section
+  .site-container
+    .recycling-info__features-slider.swiper
+      ul.recycling-info__features.swiper-wrapper
+        for item in features
+          li.recycling-info__features-item.swiper-slide
+            +features-card(item.img, item.title, null, "features-card--large")
+      .swiper-pagination
+    ul.recycling-info__numbers
+      for item in numbers
+        li.recycling-info__numbers-item
+          +number-card(item.number, item.desc)
+    +lead("Общая нагрузка на окружающую среду снижается благодаря существенному снижению количества отходов", "assets/images/lead-bg-1.jpg", "assets/images/lead-bg-1.webp")

@@ -1,0 +1,43 @@
+extends layout/layout_no_header.pug
+
+block variables
+  - const bodyClass = "page-home"
+  - const pageTitle = "О компании"
+  - const siteLang = "ru"
+  -
+    const composite = [
+      {
+        img: "composite-1.png",
+        title: "Композитные трубы",
+        text: "промысловые, насосно-компрессорные, обсадные, магистральные и технологические, трубопроводы для ЖКХ"
+      },
+      {
+        img: "composite-2.png",
+        title: "Кабеленесущие системы",
+        text: "Эстакады и несущие конструкции",
+      },
+      {
+        img: "composite-3.png",
+        title: "профили и готовые конструкции из них",
+      },
+      {
+        img: "composite-4.png",
+        title: "опоры наружного освещения и систем безопасности",
+      },
+      {
+        img: "composite-2.png",
+        title: "Изделия для городской среды",
+        text: "люки, скамейки, мусорные баки и другие изделия",
+      },
+    ]
+  -
+    const applications = [
+      {img: "applications-1.jpg", title: "Метрополитен"},
+      {img: "applications-2.jpg", title: "Нефтехимические производства"},
+      {img: "applications-3.jpg", title: "Цветная и черная металлургия"},
+      {img: "applications-4.jpg", title: "Водоканалы"},
+      {img: "applications-5.jpg", title: "Мосты"},
+    ]
+
+block content
+  include pages/about/main.pug

@@ -1,0 +1,236 @@
+.about-intro {
+  @extend .intro-section;
+
+  &__title {
+    margin-bottom: 8.8rem;
+
+    @include mq(lg) {
+      margin-bottom: 7.2rem;
+    }
+
+    @include mq(md) {
+      margin-bottom: 5.6rem;
+    }
+
+    @include mq(sm) {
+      margin-bottom: 4rem;
+    }
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.6rem;
+
+    @include mq(xl) {
+      grid-template-columns: 1fr;
+    }
+
+    @include mq(sm) {
+      gap: 0.8rem;
+    }
+  }
+
+  &__numbers {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.6rem;
+
+    @include mq(sm) {
+      gap: 0.8rem;
+    }
+  }
+
+  &__power {
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+    padding: 3.2rem;
+
+    border: 1px solid var(--color-base06);
+    border-radius: 2.4rem;
+    overflow: hidden;
+
+    @include mq(xl) {
+      min-height: 45rem;
+    }
+
+    @include mq(lg) {
+      padding: 2.6rem;
+      min-height: 40rem;
+    }
+
+    @include mq(md) {
+      padding: 2.1rem;
+      min-height: 32rem;
+    }
+
+    @include mq(sm) {
+      padding: 1.6rem;
+      border-radius: 1.2rem;
+    }
+
+    &::before {
+      content: '';
+      z-index: -1;
+
+      position: absolute;
+      top: -11.4rem;
+      right: -15.3rem;
+
+      width: 50rem;
+      height: 50rem;
+
+      background: url("../images/gears-icon.svg") no-repeat center;
+      background-size: contain;
+
+      @include mq(lg) {
+        width: 41rem;
+        height: 41rem;
+      }
+
+      @include mq(md) {
+        width: 33rem;
+        height: 33rem;
+      }
+
+      @include mq(sm) {
+        top: -6rem;
+        right: -9rem;
+
+        width: 25rem;
+        height: 25rem;
+      }
+    }
+  }
+
+  &__power-title {
+    margin-bottom: 2.4rem;
+
+    font: var(--font-once-2);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--color-base04);
+  }
+
+  &__power-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4.8rem;
+    margin-top: auto;
+
+    @include mq(lg) {
+      gap: 4rem;
+    }
+
+    @include mq(md) {
+      gap: 3.2rem;
+    }
+
+    @include mq(sm) {
+      gap: 2.4rem;
+    }
+  }
+
+  &__power-item {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  &__power-item-title {
+    font: var(--font-numbers-4);
+    font-family: manrope, sans-serif;
+    color: var(--color-base01);
+
+    @include mq(sm) {
+      font-size: 2.8rem;
+    }
+  }
+
+  &__power-item-desc {
+    font: var(--font-once-2);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--color-base04);
+  }
+
+  &__eco {
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 3.2rem;
+
+    border-radius: 2.4rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+
+    @include mq(xl) {
+      min-height: 45rem;
+    }
+
+    @include mq(lg) {
+      min-height: 40rem;
+      padding: 2.6rem;
+    }
+
+    @include mq(md) {
+      min-height: 32rem;
+      padding: 2.1rem;
+    }
+
+    @include mq(sm) {
+      padding: 1.6rem;
+      border-radius: 1.2rem;
+    }
+
+    &::before {
+      content: '';
+
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: -1;
+
+      width: 100%;
+      height: 100%;
+
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  &__eco-title {
+    margin-bottom: 2.4rem;
+
+    font: var(--font-heading-4);
+    @extend .white-uppercase-title;
+
+    @include mq(sm) {
+      margin-bottom: 1.2rem;
+    }
+  }
+
+  &__eco-text {
+    margin-bottom: 2.4rem;
+
+    font: var(--font-text-t1-light-ln125);
+    color: var(--color-base01);
+  }
+
+  &__eco-link {
+    margin-top: auto;
+
+    @include mq(sm) {
+      padding-left: 1rem;
+      padding-right: 1rem;
+      width: 100%;
+    }
+  }
+}

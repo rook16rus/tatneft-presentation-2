@@ -1,0 +1,118 @@
+.bottom-navigation {
+  padding-bottom: 6.4rem;
+
+  @include mq(lg) {
+    padding-bottom: 4.8rem;
+  }
+
+  @include mq(md) {
+    padding-bottom: 3.2rem;
+  }
+
+  @include mq(sm) {
+    padding-bottom: 1.6rem;
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.6rem;
+    min-height: 48rem;
+
+    @include mq(md) {
+      grid-template-columns: 1fr;
+      min-height: auto;
+    }
+
+    @include mq(sm) {
+      gap: 0.8rem;
+    }
+  }
+
+  &__left, &__right {
+    position: relative;
+    z-index: 1;
+
+    padding: 4.8rem;
+
+    border: 1px solid var(--color-base01-alfa10);
+    border-radius: 2.4rem;
+    overflow: hidden;
+
+    @include mq(lg) {
+      padding: 3.6rem;
+    }
+
+    @include mq(md) {
+      padding: 2.6rem;
+      min-height: 40rem;
+    }
+
+    @include mq(sm) {
+      min-height: 18rem;
+      padding: 1.6rem;
+      border-radius: 1.2rem;
+    }
+  }
+
+  &__right {
+    background: url("../images/bottom-navigation-bg.svg") no-repeat center;
+    background-size: cover;
+  }
+
+  &__link {
+    display: block;
+    max-width: 29rem;
+
+    font: var(--font-heading-4);
+    @extend .white-uppercase-title;
+
+    @include mq(sm) {
+      max-width: 16rem;
+    }
+
+    &::before {
+      content: '';
+
+      position: absolute;
+      left: 0;
+      top: 0;
+
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__graphic-block {
+    position: absolute;
+    right: 4rem;
+    bottom: 4rem;
+
+    width: 32.8rem;
+    height: 32.8rem;
+
+    @include mq(sm) {
+      width: 11.4rem;
+      height: 11.4rem;
+
+      right: 1.6rem;
+      bottom: 1.6rem;
+    }
+  }
+
+  &__graphic {
+    width: 100%;
+    height: 100%;
+  }
+}

@@ -1,0 +1,52 @@
+-
+  const numbers = [
+    {
+      number: "ПАО «ТАТНЕФТЬ»",
+      desc: "ООО «Татнефть-Пресскомпозит» входит в группу компаний"
+    },
+    {
+      number: "2011 год",
+      desc: "основание компании ООО «Татнефть-<br>Пресскомпозит»"
+    },
+    {
+      number: "> 600",
+      desc: "высококвалифицированных<br>Сотрудников"
+    },
+  ]
+
+-
+  const power = [
+    {
+      title: "> 20 000 тонн",
+      desc: "композитных изделий и сырья"
+    },
+    {
+      title: "> 2 000",
+      desc: "Номенклатур"
+    },
+  ]
+
+section.about-intro.page-section
+  .site-container
+    h1.about-intro__title.main-title
+      | О компании
+    .about-intro__wrapper
+      ul.about-intro__numbers
+        for item in numbers
+          li.about-intro__number
+            +number-card(item.number, item.desc)
+      .about-intro__power
+        h3.about-intro__power-title
+          | Производственные мощности
+        ul.about-intro__power-list
+          for item in power
+            li.about-intro__power-item
+              h3.about-intro__power-item-title= item.title
+              span.about-intro__power-item-desc= item.desc
+      .about-intro__eco(data-bg="assets/images/eco.png" data-bg-webp="assets/images/eco.webp")
+        h3.about-intro__eco-title
+          | Сознательный экологически ответственный бизнес, основанный на целях устойчивого развития
+        p.about-intro__eco-text
+          | Боремся с изменениями климата
+        a.about-intro__eco-link.button.button--outline.button--medium(href="#")
+          | Информация по переработке

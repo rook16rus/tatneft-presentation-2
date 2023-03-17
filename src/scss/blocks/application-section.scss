@@ -1,0 +1,40 @@
+.application-section {
+  &__title {
+    margin-bottom: 3.2rem;
+
+    @include mq(lg) {
+      margin-bottom: 2.6rem;
+    }
+
+    @include mq(md) {
+      margin-bottom: 2.1rem;
+    }
+
+    @include mq(sm) {
+      margin-bottom: 1.6rem;
+    }
+  }
+
+  &__desc {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    max-width: 64.1rem;
+    margin-bottom: 5.6rem;
+
+    font: var(--font-text-t1-light-ln145);
+    color: var(--color-base01);
+
+    @include mq(lg) {
+      margin-bottom: 4.8rem;
+    }
+
+    @include mq(md) {
+      margin-bottom: 4rem;
+    }
+
+    @include mq(sm) {
+      margin-bottom: 3.2rem;
+    }
+  }
+}
