@@ -1,0 +1,260 @@
+.single {
+  min-height: 100vh;
+  padding: 5.2rem 0;
+
+  &__title {
+    max-width: 134rem;
+    margin-bottom: 5.2rem;
+  }
+
+  &__tabs {
+    display: flex;
+    margin-right: -0.8rem;
+  }
+
+  &__tab {
+    display: flex;
+    align-items: center;
+    height: 4rem;
+    padding: 0 3.2rem;
+    margin-right: 0.8rem;
+    margin-bottom: 5.2rem;
+
+    border: 1px solid var(--color-base01-alfa20);
+    border-radius: 99.9rem;
+
+    font: var(--font-common-b2);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: var(--color-base01-alfa20);
+
+    transition: 0.3s;
+
+    &.tab-active {
+      background-color: var(--color-base01);
+      border-color: var(--color-base01);
+      color: var(--color-base09);
+    }
+  }
+
+  &__content {
+    display: grid;
+    gap: 1.6rem;
+    grid-template-columns: 1fr auto;
+    margin-bottom: 2rem;
+  }
+
+  &__content-left {
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    align-items: flex-start;
+    padding: 4.3rem 4.3rem 4.3rem 6.4rem;
+    min-height: 35.6rem;
+
+    border-radius: 1.6rem;
+    border: 1px solid #1D1D1D;
+    overflow: hidden;
+
+    &::after {
+      content: '';
+
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: -1;
+
+      height: 100%;
+      width: 69.9rem;
+
+      background: url("../images/content-bg.svg") no-repeat center;
+      background-size: cover;
+    }
+  }
+
+  &__content-icon {
+    width: 7.2rem;
+    height: 7.2rem;
+    margin-right: 4rem;
+    flex-shrink: 0;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__content-subtitle {
+    margin-bottom: 4rem;
+
+    font: 300 2.8rem/115% var(--main-ff);
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: #fff;
+  }
+
+  &__content-problem {
+    display: block;
+    margin-bottom: 1.4rem;
+
+    font: var(--font-common-b2);
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    color: var(--color-base01-alfa20);
+  }
+
+  &__content-text {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 54rem;
+
+    font: var(--font-text-t1-light-ln125);
+    color: var(--color-base01);
+  }
+
+  &__document {
+    position: relative;
+    z-index: 1;
+
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    width: 27.8rem;
+    padding: 1.6rem 2.2rem;
+    gap: 2.4rem;
+    flex-shrink: 0;
+
+    border: 1px solid #1D1D1D;
+    border-radius: 1.2rem;
+    background-color: var(--color-base09);
+    cursor: pointer;
+    overflow: hidden;
+
+    font: var(--font-text-t4-light-ln115);
+    text-transform: uppercase;
+    line-height: 125%;
+    color: var(--color-base01);
+
+    &:hover::after {
+      transform: scaleX(1);
+    }
+
+    &::after {
+      content: '';
+
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      transform: scaleX(0);
+      transform-origin: left;
+
+      width: 100%;
+      height: 1px;
+
+      background-color: var(--color-primary);
+
+      transition: 0.4s ease-in-out;
+    }
+
+    img {
+      width: 4.8rem;
+      height: 6.8rem;
+      object-fit: contain;
+
+      border-radius: 0.4rem;
+    }
+  }
+
+  &__document-text {
+    max-width: 12.2rem;
+  }
+
+  &__about {
+    position: relative;
+    z-index: 1;
+
+    padding: 4.3rem;
+    width: 43.6rem;
+    min-height: 35.6rem;
+
+    border: 1px solid var(--color-base01-alfa10);
+    border-radius: 2.4rem;
+    overflow: hidden;
+    background-color: var(--color-base09);
+
+    @include mq(lg) {
+      padding: 3.6rem;
+    }
+
+    @include mq(md) {
+      padding: 2.6rem;
+      min-height: 40rem;
+    }
+
+    @include mq(sm) {
+      min-height: 18rem;
+      padding: 1.6rem;
+      border-radius: 1.2rem;
+    }
+  }
+
+  &__about-link {
+    display: block;
+    max-width: 29rem;
+
+    font: var(--font-heading-6);
+    @extend .white-uppercase-title;
+    color: var(--color-base01-alfa30);
+
+    @include mq(sm) {
+      max-width: 16rem;
+    }
+
+    &::before {
+      content: '';
+
+      position: absolute;
+      left: 0;
+      top: 0;
+
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__about-graphic-block {
+    position: absolute;
+    right: 1rem;
+    bottom: 4rem;
+
+    width: 27rem;
+    height: 27rem;
+
+    @include mq(sm) {
+      width: 11.4rem;
+      height: 11.4rem;
+
+      right: 1.6rem;
+      bottom: 1.6rem;
+    }
+  }
+
+  &__about-graphic {
+    width: 100%;
+    height: 100%;
+  }
+}

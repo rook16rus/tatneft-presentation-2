@@ -1,0 +1,32 @@
+section.single
+  .site-container
+    h1.single__title.main-title
+      | Композитные трубопроводы в месторождениях
+    .single__tabs
+      .single__tab.tab-active
+        | Строительство нефтепромысловых трубопроводов
+      .single__tab
+        | Методика диагностирования остаточного ресурса трубопроводов
+    .single__tabs-contents
+      .single__tabs-content
+        .single__content
+          .single__content-left
+            .single__content-icon
+              +icon-multi('document-icon')
+            .single__content-info
+              h3.single__content-subtitle
+                | Разработан и утвержден ГОСТ Р 59411-2021 «Трубопроводы промысловые из стеклопластиковых труб. Правила проектирования и эксплуатации»
+              span.single__content-problem
+                | Проблематика
+              .single__content-text
+                p
+                  | Отсутствие правил проектирования, строительства, эксплуатации стеклопластиковых промысловых трубопроводов
+            .single__document(data-src="assets/images/document.png" data-fancybox)
+              +imgLazy("document.png", "Фото документа").single__document-img
+              p.single__document-text
+                | Документ ГОСТ&nbsp;Р 59411-2021
+          .single__about
+            a.single__about-link Подробнее О компании
+            .single__about-graphic-block
+              canvas.single__about-graphic.js-logo-animate(data-animation-path="include/footer-logo/")
+

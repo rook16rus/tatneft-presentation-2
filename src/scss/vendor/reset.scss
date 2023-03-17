@@ -626,3 +626,11 @@
   fill: var(--color-base01);
   stroke: currentColor;
 }
+
+.fancybox__container .fancybox__slide .fancybox__image {
+  border-radius: 0;
+}
+
+.fancybox__container .carousel__button:not(.fancybox__button--close) {
+  display: none;
+}
