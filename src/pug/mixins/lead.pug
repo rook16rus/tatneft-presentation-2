@@ -1,0 +1,8 @@
+mixin lead(text, imgBg, imgBgWebp)
+  if imgBg
+    .lead.lead--images(data-bg=imgBg data-bg-webp=imgBgWebp)
+      p= text
+  else
+    .lead
+      p= text
+      +imgLazy('lead-bg.svg', "Фон")

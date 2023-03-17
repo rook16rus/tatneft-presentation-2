@@ -1,0 +1,30 @@
+-
+  const list = [
+    {mod: "features-card--grey", title: "Композитные трубопроводы в месторождениях"},
+    {mod: "features-card--grey", title: "Композиты в строительстве и энергетике"},
+    {mod: "features-card--grey", title: "Применение композитов на опасных производственных объектах"},
+    {mod: "features-card--grey", title: "Развитие применения композитных изделий в городской среде – ЖКХ и благоустройство"},
+  ]
+
+
+section.intro
+  .intro__video
+    .site-container
+      video(preload="none" muted autoplay loop playsinline src="assets/include/intro-video.mp4")
+        //source(src=`assets/include/intro-video.webm` type="video/webm")
+        source(src=`assets/include/intro-video.mp4` type="video/mp4")
+      .intro__video-play
+        button.intro__video-play-button(data-src="https://youtu.be/HcdVMJR1Rs8" data-fancybox)
+          +icon-multi("play-icon")
+        .intro__video-info
+          h2.intro__video-title Видео о компании
+          span.intro__video-duration 07:45
+  .intro__footer
+    .site-container
+      .intro__footer-wrapper
+        h1.intro__title
+          | Наш вклад в композитную отрасль
+        ul.intro__list
+          for item in list
+            li.intro__item
+              +features-card(item.img, item.title, item.text, item.mod)

@@ -1,0 +1,4 @@
+mixin number-card(number, desc, mod)
+  article(class=`number-card${mod ? ' ' + mod : ''}`)
+    h3.number-card__title= number
+    p.number-card__desc!= desc

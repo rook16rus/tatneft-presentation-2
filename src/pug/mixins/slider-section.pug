@@ -1,0 +1,5 @@
+mixin slider-section(title, data)
+  .slider-section.page-section&attributes(attributes)
+    .site-container
+      h2.slider-section__title.section-title= title
+      +scroll-slider(data, "features-card")

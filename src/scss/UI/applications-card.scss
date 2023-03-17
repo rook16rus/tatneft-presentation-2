@@ -1,0 +1,49 @@
+.applications-card {
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 0.6rem;
+  min-height: 26rem;
+  width: 36.4rem;
+
+  border-radius: 1.2rem;
+  overflow: hidden;
+
+  @include mq(lg) {
+    min-height: 24rem;
+  }
+
+  @include mq(md) {
+    min-height: 22rem;
+  }
+
+  @include mq(sm) {
+    min-height: 20rem;
+  }
+
+  img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__title {
+    padding: 0.6rem 1.6rem 0.6rem 1.2rem;
+
+    font: var(--font-text-t3-light-ln125);
+    letter-spacing: 0.03em;
+    color: var(--color-base01);
+
+    background-color: var(--color-base09);
+    border-radius: 0.8rem;
+  }
+}

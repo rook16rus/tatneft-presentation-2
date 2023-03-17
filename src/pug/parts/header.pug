@@ -1,0 +1,20 @@
+header.header.fix-blocks.is-fixed
+  .site-container.header__row
+    .header__row-block
+      a.logo(href="/")
+        img(src="assets/images/logo.svg" alt="Логотип компании")
+    .header__row-block
+      a.header__btn.button.button--outline(href="about.html")
+        span О компании
+        +icon-mono('about-icon')
+      a.header__btn.button.button--outline(href="about.html")
+        span Развитие бизнеса
+        +icon-mono('about-icon')
+      a.header__btn.button.button--outline(href="about.html")
+        span Развитие качества SMC и BMC компаундов
+        +icon-mono('about-icon')
+      a.header__btn.button.button--outline(href="about.html")
+        span Переработка композитных отходов
+        +icon-mono('about-icon')
+      button.header__btn.button(data-modal-heading data-path="presentation" data-modal-legend="Отправьте презентацию")
+        span Отправить презентацию

@@ -1,0 +1,9 @@
+mixin application-section(data, desc)
+  section.application-section.page-section&attributes(attributes)
+    .site-container
+      h2.application-section__title.section-title
+        | Применение
+      if desc
+        .application-section__desc
+          p= desc
+      +scroll-slider(data, 'applications-card')

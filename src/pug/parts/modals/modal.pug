@@ -1,0 +1,48 @@
+.modal__container.js-modal-legend(data-target="presentation")
+  .modal__content
+    button.button-reset.modal__close-btn.modal-close(type="button")
+      +icon-mono("close-star")(width="40" height="40" class="modal__close-btn-icon")
+    .modal__content-inner
+      .modal__legend
+      .modal__text
+        | Заполните контактные данные получателя и отправьте презентацию. Презентация придет на указанный Email.
+
+      form.modal__form(action="#" data-need-validation)
+        input(type="hidden" class="hidden-input" name="hidden-value")
+        label.input-label.js-validation-wrapper.modal__form-input
+          input(type="text" class="input" name="name" data-parsley-required data-parsley-fio placeholder="Имя")
+        label.input-label.js-validation-wrapper.modal__form-input
+          input(type="email" class="input" name="email" data-parsley-required placeholder="Email")
+        label.input-label.js-validation-wrapper.modal__form-input
+          input(type="tel" class="input js-phone-mask" name="name" data-parsley-required data-parsley-phone placeholder="+7 (900) 000 00 00")
+        button.button.modal__form-btn
+          | Отправить
+        .callback-section__form-agreement
+          | Нажимая кнопку «Отправить» вы соглашаетесь на обработку #[a(href="/") персональных данных]
+
+.modal__container.js-modal-legend(data-target="success")
+  .modal__content.modal__content-message-modal(style={"--message-color": "var(--color-secondary)"})
+    button.button-reset.modal__close-btn.modal-close(type="button")
+      +icon-mono("close-star")(width="40" height="40" class="modal__close-btn-icon")
+    .modal__content-inner
+      .modal__legend
+        | Презентация успешно #[br]отправлена
+      .modal__text.modal__text--small
+        | Презентация отправлена на&nbsp;указанный вами Email.
+
+      button.button.modal__form-btn.modal__form-btn--top-auto.modal-close
+        | Отлично
+
+
+.modal__container.js-modal-legend(data-target="error")
+  .modal__content.modal__content-message-modal(style={"--message-color": "var(--color-primary)"})
+    button.button-reset.modal__close-btn.modal-close(type="button")
+      +icon-mono("close-star")(width="40" height="40" class="modal__close-btn-icon")
+    .modal__content-inner
+      .modal__legend
+        | Не удалось отправить заявку
+      .modal__text.modal__text--small
+        | Пожалуйста отправьте заявку еще раз.
+
+      button.button.modal__form-btn.modal__form-btn--top-auto.modal-close
+        | Отправить еще раз

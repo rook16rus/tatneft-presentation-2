@@ -1,0 +1,164 @@
+.features-card {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 20rem;
+  width: 36.4rem;
+  padding: 2.4rem;
+
+  border: 1px solid var(--color-base01-alfa10);
+  border-radius: 1.6rem;
+
+  @include mq(lg) {
+    min-height: 18rem;
+  }
+
+  @include mq(md) {
+    min-height: 16rem;
+    padding: 2rem;
+  }
+
+  @include mq(sm) {
+    min-height: 14rem;
+    padding: 1.6rem;
+
+    border-radius: 1.2rem;
+  }
+
+  &::before {
+    counter-increment: order;
+    content: "[" counter(order, decimal-leading-zero) "]";
+
+    margin-bottom: 2rem;
+
+    font: var(--font-numbers-5);
+    letter-spacing: 0.03em;
+    color: var(--color-base01-alfa30);
+  }
+
+  &--with-img {
+    min-height: 20rem;
+
+    &::before {
+      margin-bottom: 5rem;
+    }
+
+    @include mq(sm) {
+      min-height: 18.8rem;
+    }
+  }
+
+  &--large {
+    min-height: 38.8rem;
+    padding: 4rem;
+
+    @include mq(lg) {
+      min-height: 32rem;
+      padding: 3.2rem;
+    }
+
+    @include mq(md) {
+      min-height: 27rem;
+      padding: 2.4rem;
+    }
+
+    @include mq(sm) {
+      min-height: 22rem;
+      padding: 1.6rem;
+    }
+
+    &::before {
+      font: var(--font-heading-6);
+    }
+
+    .features-card__img {
+      width: 8rem;
+      height: 8rem;
+
+      @include mq(lg) {
+        width: 7rem;
+        height: 7rem;
+      }
+
+      @include mq(md) {
+        width: 6rem;
+        height: 6rem;
+      }
+
+      @include mq(sm) {
+        width: 4.8rem;
+        height: 4.8rem;
+      }
+    }
+
+    .features-card__title {
+      font: var(--font-heading-6);
+      letter-spacing: -0.02em;
+
+      @include mq(sm) {
+        letter-spacing: 0;
+      }
+    }
+  }
+
+  &--grey {
+    min-height: 13.8rem;
+    padding: 1.6rem 2.4rem;
+
+    background-color: var(--color-base07);
+    border: 0;
+
+    .features-card__title {
+      margin-top: 0;
+
+      font-weight: 300;
+      line-height: 115%;
+    }
+  }
+
+  * {
+    cursor: default;
+  }
+
+  &__img {
+    position: absolute;
+    top: 1.8rem;
+    right: 2.4rem;
+
+    width: 6rem;
+    height: 6rem;
+
+    @include mq(sm) {
+      top: 1.6rem;
+      right: 1.6rem;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain ;
+    }
+  }
+
+  &__title {
+    margin-top: auto;
+    margin-bottom: 0.8rem;
+
+    font: var(--font-text-t3-reg);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: var(--color-base01);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__text {
+    font: var(--font-text-t3-light-ln125);
+    letter-spacing: 0.03em;
+    color: var(--color-base04);
+  }
+}

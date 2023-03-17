@@ -1,0 +1,13 @@
+mixin bottom-navigation(rightText, rightLink, animationPath)
+  nav.bottom-navigation
+    .site-container
+      .bottom-navigation__wrapper
+        .bottom-navigation__left
+          a.bottom-navigation__link(href="index.html")
+            | Вернуться на главную
+          +pictureLazy('navigation-bg.jpg').bottom-navigation__img
+        .bottom-navigation__right
+          a.bottom-navigation__link(href=rightLink)= rightText
+          .bottom-navigation__graphic-block
+            canvas.bottom-navigation__graphic.js-logo-animate(data-animation-path=animationPath)
+

@@ -1,0 +1,64 @@
+.lead {
+  position: relative;
+  z-index: 1;
+
+  padding: 7.2rem;
+  margin-bottom: 1.6rem;
+
+  border: 1px solid var(--color-base06);
+  border-radius: 2.4rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+
+  font: var(--font-heading-3);
+  @extend .white-uppercase-title;
+
+  @include mq(lg) {
+    padding: 5.6rem;
+  }
+
+  @include mq(md) {
+    padding: 3.6rem;
+  }
+
+  @include mq(sm) {
+    padding: 1.6rem;
+    margin-bottom: 0.8rem;
+
+    border-radius: 1.2rem;
+  }
+
+  &--images {
+    border: 0;
+
+    &::before {
+      content: '';
+
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: -1;
+
+      width: 100%;
+      height: 100%;
+
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  p {
+    max-width: 102rem;
+  }
+
+  img {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+
+    height: 100%;
+    width: auto;
+  }
+}

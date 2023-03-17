@@ -1,0 +1,8 @@
+mixin features-card(img, title, text, mod)
+  article(class=`features-card${img ? " features-card--with-img" : ""}${mod ? ' ' + mod : ''}`)
+    if img
+      .features-card__img
+        +imgLazy(img, "Фото")
+    h3.features-card__title= title
+    if text
+      p.features-card__text= text

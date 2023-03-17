@@ -1,0 +1,63 @@
+.number-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 20rem;
+  padding: 3.2rem;
+
+  border: 1px solid var(--color-base06);
+  border-radius: 2.4rem;
+
+  &--small {
+    min-height: 16.8rem;
+
+    @include mq(lg) {
+      min-height: 15rem;
+    }
+
+    @include mq(md) {
+      min-height: 13.5rem;
+    }
+
+    @include mq(sm) {
+      min-height: 11.5rem;
+    }
+  }
+
+  @include mq(lg) {
+    min-height: 17rem;
+    padding: 2.6rem;
+  }
+
+  @include mq(md) {
+    min-height: 14.3rem;
+    padding: 2.2rem;
+  }
+
+  @include mq(sm) {
+    min-height: 11.5rem;
+    padding: 1.6rem;
+
+    border-radius: 1.2rem;
+  }
+
+  &__title {
+    margin-bottom: 2rem;
+
+    font: var(--font-numbers-4);
+    font-family: manrope, sans-serif;
+    color: var(--color-base01);
+
+    @include mq(sm) {
+      font-size: 2.8rem;
+    }
+  }
+
+  &__desc {
+    margin-top: auto;
+
+    font: var(--font-once-2);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--color-base04);
+  }
+}

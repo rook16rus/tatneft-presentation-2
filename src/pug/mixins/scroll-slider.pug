@@ -1,0 +1,13 @@
+mixin scroll-slider(data, cardComponent)
+  .scroll-slider.swiper
+    .swiper-wrapper
+      each item, index in data
+        .scroll-slider__slide.swiper-slide
+          +#{cardComponent}(...Object.values(item))
+    .swiper-scrollbar
+    .swiper-pagination
+    .swiper-navigation
+      button.swiper-button.swiper-button-prev
+        +icon-mono('slider-arrow-icon')
+      button.swiper-button.swiper-button-next
+        +icon-mono('slider-arrow-icon')
