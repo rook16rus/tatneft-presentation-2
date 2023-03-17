@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ru" data-lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Описание сайта">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+    <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#080808">
+    <title>Главная | Tatneft</title>
+    <link rel="stylesheet" href="assets/css/style.min.css">
+  </head>
+  <body class="page-home no-scroll">
+
+    <header class="header fix-blocks is-fixed">
+      <div class="site-container header__row">
+        <div class="header__row-block">
+          <a class="logo" href="/">
+            <img src="assets/images/logo.svg" alt="Логотип компании">
+          </a>
+        </div>
+        <div class="header__row-block">
+          <a class="header__btn button button--outline" href="about.html"><span>О компании</span>
+            <svg class="icon icon-about-icon">
+              <use xlink:href="assets/images/sprites/sprite-mono.svg#about-icon"></use>
+            </svg>
+          </a>
+          <a class="header__btn button button--outline" href="about.html"><span>Развитие бизнеса</span>
+            <svg class="icon icon-about-icon">
+              <use xlink:href="assets/images/sprites/sprite-mono.svg#about-icon"></use>
+            </svg>
+          </a>
+          <a class="header__btn button button--outline" href="about.html"><span>Развитие качества SMC и BMC компаундов</span>
+            <svg class="icon icon-about-icon">
+              <use xlink:href="assets/images/sprites/sprite-mono.svg#about-icon"></use>
+            </svg>
+          </a>
+          <a class="header__btn button button--outline" href="about.html"><span>Переработка композитных отходов</span>
+            <svg class="icon icon-about-icon">
+              <use xlink:href="assets/images/sprites/sprite-mono.svg#about-icon"></use>
+            </svg>
+          </a>
+          <button class="header__btn button" data-modal-heading data-path="presentation" data-modal-legend="Отправьте презентацию"><span>Отправить презентацию</span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <div class="smooth-scroll">
+      <div class="page-wrapper">
+
+        <main class="page-main main">
+          <section class="intro">
+            <div class="intro__video">
+              <div class="site-container">
+                <video preload="none" muted autoplay loop playsinline src="assets/include/intro-video.mp4">
+                  <source src="assets/include/intro-video.mp4" type="video/mp4">
+                </video>
+                <div class="intro__video-play">
+                  <button class="intro__video-play-button" data-src="https://youtu.be/HcdVMJR1Rs8" data-fancybox>
+                    <svg class="icon icon-play-icon">
+                      <use xlink:href="assets/images/sprites/sprite-multi.svg#play-icon"></use>
+                    </svg>
+                  </button>
+                  <div class="intro__video-info">
+                    <h2 class="intro__video-title">Видео о компании</h2><span class="intro__video-duration">07:45</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="intro__footer">
+              <div class="site-container">
+                <div class="intro__footer-wrapper">
+                  <h1 class="intro__title">Наш вклад в композитную отрасль</h1>
+                  <ul class="intro__list">
+                    <li class="intro__item">
+                      <article class="features-card features-card--grey">
+                        <h3 class="features-card__title">Композитные трубопроводы в месторождениях</h3>
+                      </article>
+                    </li>
+                    <li class="intro__item">
+                      <article class="features-card features-card--grey">
+                        <h3 class="features-card__title">Композиты в строительстве и энергетике</h3>
+                      </article>
+                    </li>
+                    <li class="intro__item">
+                      <article class="features-card features-card--grey">
+                        <h3 class="features-card__title">Применение композитов на опасных производственных объектах</h3>
+                      </article>
+                    </li>
+                    <li class="intro__item">
+                      <article class="features-card features-card--grey">
+                        <h3 class="features-card__title">Развитие применения композитных изделий в городской среде – ЖКХ и благоустройство</h3>
+                      </article>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+    <div class="preloader js-preloader"></div>
+    <div class="modal">
+      <div class="modal__container js-modal-legend" data-target="presentation">
+        <div class="modal__content">
+          <button class="button-reset modal__close-btn modal-close" type="button">
+            <svg class="icon icon-close-star modal__close-btn-icon" width="40" height="40">
+              <use xlink:href="assets/images/sprites/sprite-mono.svg#close-star"></use>
+            </svg>
+          </button>
+          <div class="modal__content-inner">
+            <div class="modal__legend"></div>
+            <div class="modal__text">Заполните контактные данные получателя и отправьте презентацию. Презентация придет на указанный Email.</div>
+            <form class="modal__form" action="#" data-need-validation>
+              <input class="hidden-input" type="hidden" name="hidden-value">
+              <label class="input-label js-validation-wrapper modal__form-input">
+                <input class="input" type="text" name="name" data-parsley-required data-parsley-fio placeholder="Имя">
+              </label>
+              <label class="input-label js-validation-wrapper modal__form-input">
+                <input class="input" type="email" name="email" data-parsley-required placeholder="Email">
+              </label>
+              <label class="input-label js-validation-wrapper modal__form-input">
+                <input class="input js-phone-mask" type="tel" name="name" data-parsley-required data-parsley-phone placeholder="+7 (900) 000 00 00">
+              </label>
+              <button class="button modal__form-btn">Отправить</button>
+              <div class="callback-section__form-agreement">Нажимая кнопку «Отправить» вы соглашаетесь на обработку<a href="/">персональных данных</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="modal__container js-modal-legend" data-target="success">
+        <div class="modal__content modal__content-message-modal" style="--message-color:var(--color-secondary);">
+          <button class="button-reset modal__close-btn modal-close" type="button">
+            <svg class="icon icon-close-star modal__close-btn-icon" width="40" height="40">
+              <use xlink:href="assets/images/sprites/sprite-mono.svg#close-star"></use>
+            </svg>
+          </button>
+          <div class="modal__content-inner">
+            <div class="modal__legend">Презентация успешно<br>отправлена</div>
+            <div class="modal__text modal__text--small">Презентация отправлена на&nbsp;указанный вами Email.</div>
+            <button class="button modal__form-btn modal__form-btn--top-auto modal-close">Отлично</button>
+          </div>
+        </div>
+      </div>
+      <div class="modal__container js-modal-legend" data-target="error">
+        <div class="modal__content modal__content-message-modal" style="--message-color:var(--color-primary);">
+          <button class="button-reset modal__close-btn modal-close" type="button">
+            <svg class="icon icon-close-star modal__close-btn-icon" width="40" height="40">
+              <use xlink:href="assets/images/sprites/sprite-mono.svg#close-star"></use>
+            </svg>
+          </button>
+          <div class="modal__content-inner">
+            <div class="modal__legend">Не удалось отправить заявку</div>
+            <div class="modal__text modal__text--small">Пожалуйста отправьте заявку еще раз.</div>
+            <button class="button modal__form-btn modal__form-btn--top-auto modal-close">Отправить еще раз</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </body>
+  <script>
+    const path = 'assets/'
+  </script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/backend.js"></script>
+</html>
