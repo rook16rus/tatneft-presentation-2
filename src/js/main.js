@@ -17,6 +17,9 @@ import animateGraphic from "./helpers/animateGraphic";
 import pageLoader from "./helpers/pageLoader";
 import backgroundWebp from "./helpers/backgroundWebp";
 import fancybox from "./helpers/fancybox";
+import gallerySlider from "./helpers/gallerySlider";
+import galleryCursor from "./helpers/galleryCursor";
+import tabs from "./helpers/tabs";
 
 documenReady(() => {
   window.tatneft_api = { locoFlag: false, menuImages: false };
@@ -37,6 +40,9 @@ documenReady(() => {
   pageLoader();
   backgroundWebp();
   fancybox();
+  gallerySlider();
+  galleryCursor();
+  tabs();
 });
 
 
