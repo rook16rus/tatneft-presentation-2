@@ -1,0 +1,267 @@
+.business {
+  padding: 7.2rem 0 6.2rem;
+
+  &__title {
+    margin-bottom: 5.2rem;
+  }
+
+  &__tabs {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-right: -0.8rem;
+    margin-bottom: 5.2rem;
+  }
+
+  &__tab {
+    @extend .tab;
+
+    margin-right: 0.8rem;
+  }
+
+  &__contents {
+    position: relative;
+  }
+
+  &__content {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    width: 100%;
+
+    visibility: hidden;
+    opacity: 0;
+
+    transition: 0.3s;
+
+    &.active {
+      position: static;
+
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &__projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.6rem;
+    grid-auto-flow: dense;
+  }
+
+  &__project {
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 3.2rem;
+    min-height: 27rem;
+
+    border-radius: 2.4rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+
+    &::before, &::after {
+      content: '';
+
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: -1;
+
+      width: 100%;
+      height: 100%;
+    }
+
+    &::before {
+      background-color: rgba(8, 8, 8, 0.3);
+    }
+
+    &::after {
+      background-image: linear-gradient(90deg, rgba(8, 8, 8, 0.3) -2.86%, rgba(8, 8, 8, 0) 69.03%);
+    }
+
+    &:nth-child(3n + 1) {
+      grid-row: span 2;
+      min-height: 55rem;
+    }
+
+    &:nth-child(9n+3){
+      grid-column: 2 / 3;
+    }
+
+    &:nth-child(9n+6){
+      grid-column: 1 / 2;
+    }
+  }
+
+  &__project-title {
+    margin-bottom: 2rem;
+
+    font: var(--font-heading-3);
+    @extend .white-uppercase-title;
+  }
+
+  &__project-text {
+    font: var(--font-once-2);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: rgba(222, 222, 222, 0.6);
+  }
+
+  &__cooperation {
+    display: grid;
+    grid-template-columns: repeat(24, 1fr);
+    gap: 1.6rem;
+  }
+
+  &__contacts {
+    grid-column: span 9;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 1.2rem;
+
+    border-radius: 2.4rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+  }
+
+  &__contacts-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 2rem 3.2rem 3.2rem;
+    width: 100%;
+    max-width: 53.7rem;
+
+    border-radius: 2rem;
+    background-color: var(--color-base01);
+  }
+
+  &__contacts-title {
+    margin-top: 1rem;
+    margin-right: 2rem;
+
+    font: var(--font-common-b2);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: rgba(8, 8, 8, 0.4);
+  }
+
+  &__contacts-info {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  &__contacts-phone {
+    font: var(--font-heading-3);
+    letter-spacing: -0.02em;
+    color: var(--color-base09);
+  }
+
+  &__contacts-email {
+    font: var(--font-text-t1-light-ln125);
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--color-base09);
+  }
+
+  &__cooperation-info {
+    grid-column: span 15;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  &__cooperation-lead {
+    position: relative;
+    z-index: 1;
+
+    min-height: 43.6rem;
+    padding: 5.2rem 6.4rem;
+
+    border-radius: 2.4rem;
+    border: 1px solid var(--color-base06);
+    background-color: var(--color-base09);
+    overflow: hidden;
+
+    &::before {
+      content: '';
+
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: -1;
+
+      width: 69.6rem;
+      height: 100%;
+
+      background: url("../images/cooperation-lead-bg.svg") no-repeat center;
+      background-size: contain;
+    }
+  }
+
+  &__cooperation-title {
+    margin-bottom: 4.6rem;
+
+    font: var(--font-heading-3);
+    @extend .white-uppercase-title;
+  }
+
+  &__cooperation-subtitle {
+    margin-bottom: 2.8rem;
+
+    font: var(--font-common-b2);
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    color: var(--color-base01-alfa20);
+  }
+
+  &__cooperation-directions {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3.2rem 3.6rem;
+    max-width: 87.6rem;
+
+    counter-reset: order;
+  }
+
+  &__cooperation-direction {
+    font: var(--font-heading-6);
+    @extend .white-uppercase-title;
+
+    &::before {
+      counter-increment: order;
+      content: "[" counter(order, decimal-leading-zero) "] ";
+
+      color: var(--color-primary);
+    }
+  }
+
+  &__cooperation-features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+
+    counter-reset: order;
+  }
+
+  .features-card {
+    min-height: 26rem;
+    background-color: var(--color-base09);
+
+    &__title {
+      font: var(--font-text-t1-reg);
+    }
+  }
+}

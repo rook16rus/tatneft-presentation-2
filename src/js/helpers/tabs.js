@@ -1,3 +1,5 @@
+import smoothScroll from "./smoothScroll";
+
 export default function tabs() {
   const tabsContainers = document.querySelectorAll('.js-tabs-container');
 
@@ -29,6 +31,8 @@ export default function tabs() {
           tabContent.classList.remove('active')
         }
       })
+
+      smoothScroll();
     }
   })
 

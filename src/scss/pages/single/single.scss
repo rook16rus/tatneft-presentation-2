@@ -13,29 +13,10 @@
   }
 
   &__tab {
-    display: flex;
-    align-items: center;
-    height: 4rem;
-    padding: 0 3.2rem;
+    @extend .tab;
+
     margin-right: 0.8rem;
     margin-bottom: 5.2rem;
-
-    border: 1px solid var(--color-base01-alfa20);
-    border-radius: 99.9rem;
-    cursor: pointer;
-
-    font: var(--font-common-b2);
-    text-transform: uppercase;
-    letter-spacing: 0.03em;
-    color: var(--color-base01-alfa20);
-
-    transition: 0.3s;
-
-    &.active {
-      background-color: var(--color-base01);
-      border-color: var(--color-base01);
-      color: var(--color-base09);
-    }
   }
 
   &__tabs-contents {

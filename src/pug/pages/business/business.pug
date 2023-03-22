@@ -1,0 +1,112 @@
+-
+  const projects = [
+    {
+      img: "projects-1.jpg",
+      title: "2700 км в год",
+      text: "К 2024 году увеличение проектной мощности по производству композитных линейных, насосно-компрессорных, обсадных труб",
+    },
+    {
+      img: "projects-2.jpg",
+      title: "Трубы большого диаметра",
+      text: "Ведется строительство завода по производству труб большого диаметра DN от 400 мм до 4000 мм. Начало реализации продукции запланировано на 2024 год.",
+    },
+    {
+      img: "projects-3.jpg",
+      title: "Настилы",
+      text: "Организовано производство композитного решетчатого настила с формовочными столами под ячейки 38х38х38, 50х50х50. Проектная мощность 12800 кв.м. в год",
+    },
+    {
+      img: "projects-4.jpg",
+      title: "Стекло-пластиковая арматура",
+      text: "С 1 июня 2023 года запуск 3 линий по производству стеклопластиковой арматуры диаметром от 4 до 25 мм. Проектная мощность – 10 тыс км в год.",
+    },
+    {
+      img: "projects-5.jpg",
+      title: "Стекло-пластиковые штанги",
+      text: "4 кв. 2023 года запуск производства стеклопластиковых штанг диаметром 22, 25 мм.",
+    },
+    {
+      img: "projects-6.jpg",
+      title: "Инжекция",
+      text: "Ведутся работы по оптимизации технологий производства – модернизации блока фильеры: инжекционная пултрузия",
+    },
+    {
+      img: "projects-7.jpg",
+      title: "Емкости и резервуары",
+      text: "Начаты работы по организации производства композитных емкостей. Основные категории продукции: накопительные емкости и резервуары, а также очистные Сооружения, КНС.",
+    },
+    {
+      img: "projects-8.jpg",
+      title: "Гибкие трубы",
+      text: "Ведется проектная работа по запуску производства гибких высоконапорных полимерно-армированных труб. Начало реализации продукции запланировано на 2024г.",
+    },
+    {
+      img: "projects-9.jpg",
+      title: "Переход на отечественное сырье",
+      text: "В 2022 году освоено собственное производство пасты оксида магния и антиусадочной добавки высокого качества для SMC и BMC.",
+    },
+  ]
+
+-
+  const directions = [
+    "область работ по снятию ограничений в нормативно-технической документации",
+    "совместная разработка новых продукций, освоение новых технологий",
+    "совместное развитие бизнеса",
+  ]
+
+-
+  const features = [
+    {
+      img: "cooperation-features-1.svg",
+      title: "Инновационный потенциал компании более 10 патентов",
+    },
+    {
+      img: "cooperation-features-2.svg",
+      title: "сознательный, экологически ответственный бизнес, основанный на целях устойчивого развития",
+    },
+    {
+      img: "cooperation-features-3.svg",
+      title: "№1 по производству качественной композитной продукцииМы гордимся своим качеством!",
+    },
+  ]
+
+section.business.js-tabs-container
+  .site-container
+    h1.business__title.main-title
+      | Развитие бизнеса
+    .business__tabs.js-tabs
+      button.business__tab.js-tab.active(data-href="businessContent1")
+        | Новые проекты
+      button.business__tab.js-tab(data-href="businessContent2")
+        | Приглашаем к сотрудничеству
+    .business__contents
+      .business__content.js-tab-content.active(data-id="businessContent1")
+        ul.business__projects
+          for item in projects
+            li.business__project(data-bg=`aseets/images/${item.img}` data-bg-webp=`assets/images/${item.img.split('.')[0] + ".webp"}`)
+              h3.business__project-title= item.title
+              p.business__project-text= item.text
+      .business__content.js-tab-content(data-id="businessContent2")
+        .business__cooperation
+          .business__contacts(data-bg="assets/images/contacts-bg.jpg" data-bg-webp="assets/images/contacts-bg.webp")
+            .business__contacts-content
+              h3.business__contacts-title
+                | контакты
+              .business__contacts-info
+                a.business__contacts-phone(href="tel:88555751998")
+                  | 8 (85557) 5-19-98
+                a.business__contacts-email(href="mailto:sales@tnpc.ru")
+                  | sales@tnpc.ru
+          .business__cooperation-info
+            .business__cooperation-lead
+              h2.business__cooperation-title
+                | Приглашаем к сотрудничеству
+              h3.business__cooperation-subtitle
+                | направления
+              ul.business__cooperation-directions
+                for item in directions
+                  li.business__cooperation-direction= item
+            ul.business__cooperation-features
+              for item in features
+                li.business__cooperation-feature
+                  +features-card(item.img, item.title, item.text, "features-card--small")
