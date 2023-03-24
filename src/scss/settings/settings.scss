@@ -613,6 +613,18 @@ a:focus {
 
   transition: 0.3s;
 
+  @include mq('custom', 'max', 1024) {
+
+  }
+
+  @include mq('custom', 'max', 768) {
+
+  }
+
+  @include mq('custom', 'max', 640) {
+    padding: 1rem 2.4rem;
+  }
+
   &.active {
     background-color: var(--color-base01);
     border-color: var(--color-base01);
