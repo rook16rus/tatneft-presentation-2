@@ -24,7 +24,8 @@ section.intro
       .intro__footer-wrapper
         h1.intro__title
           | Наш вклад в композитную отрасль
-        .intro__list
-          for item in list
-            a.intro__item(href="single.html")
-              +features-card(item.img, item.title, item.text, item.mod)
+        .intro__slider.swiper
+          .intro__list.swiper-wrapper
+            for item in list
+              a.intro__item.swiper-slide(href="single.html")
+                +features-card(item.img, item.title, item.text, item.mod)

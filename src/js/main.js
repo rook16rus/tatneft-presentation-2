@@ -22,6 +22,7 @@ import fancybox from "./helpers/fancybox";
 import gallerySlider from "./helpers/gallerySlider";
 import galleryCursor from "./helpers/galleryCursor";
 import tabs from "./helpers/tabs";
+import introSlider from "./helpers/introSlider";
 
 documenReady(() => {
   window.tatneft_api = { locoFlag: false, menuImages: false };
@@ -48,6 +49,7 @@ documenReady(() => {
   gallerySlider();
   galleryCursor();
   tabs();
+  introSlider();
 });
 
 

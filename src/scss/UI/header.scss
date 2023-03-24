@@ -67,7 +67,7 @@
       border: 1px solid var(--color-base01-alfa10);
       border-radius: 50%;
 
-      @include mq('custom', 'max', 640) {
+      @include mq('custom', 'max', 768) {
         width: 4.8rem;
         height: 4.8rem;
       }
@@ -86,7 +86,7 @@
         border-radius: 99.9rem;
         background-color: #fff;
 
-        @include mq('custom', 'max', 640) {
+        @include mq('custom', 'max', 768) {
           width: 1.6rem;
         }
       }
