@@ -29,6 +29,11 @@
     justify-content: flex-end;
     margin-left: -0.8rem;
     margin-bottom: -0.8rem;
+
+    @include mq('custom', 'max', 1024) {
+      margin-left: 0;
+      margin-bottom: 0;
+    }
   }
 
   &__btn {
@@ -37,40 +42,62 @@
 
     white-space: nowrap;
 
-    svg {
+    @include mq('custom', 'max', 1024) {
       display: none;
     }
 
-    @include mq(md) {
-      padding: 1.6rem 3.2rem;
-    }
-
-    @include mq(sm) {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 4.8rem;
-      height: 4.8rem;
-      padding: 0;
-
-      background-color: transparent;
-      border-color: rgba(222, 222, 222, 0.1);
-
-      color: var(--color-base01);
-
-      span {
-        display: none;
-      }
-
-      svg {
-        display: block;
-        width: 1.6rem;
-        height: 1.6rem;
-      }
+    svg {
+      display: none;
     }
   }
 
   @include mq(sm) {
     align-items: flex-end;
+  }
+
+  &__burger {
+    position: relative;
+    display: none;
+
+    @include mq('custom', 'max', 1024) {
+      display: block;
+      width: 7rem;
+      height: 7rem;
+
+      border: 1px solid var(--color-base01-alfa10);
+      border-radius: 50%;
+
+      @include mq('custom', 'max', 640) {
+        width: 4.8rem;
+        height: 4.8rem;
+      }
+
+      &::before, &::after {
+        content: '';
+
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+
+        width: 2.4rem;
+        height: 1px;
+
+        border-radius: 99.9rem;
+        background-color: #fff;
+
+        @include mq('custom', 'max', 640) {
+          width: 1.6rem;
+        }
+      }
+
+      &::before {
+        top: 43%;
+      }
+
+      &::after {
+        top: 57%;
+      }
+    }
   }
 }
