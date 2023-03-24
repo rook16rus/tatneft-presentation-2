@@ -415,8 +415,9 @@
 
     &::before {
       counter-increment: order;
-      content: "[" counter(order, decimal-leading-zero) "] ";
+      content: "[" counter(order, decimal-leading-zero) "]";
 
+      margin-right: 0.6rem;
       color: var(--color-primary);
     }
   }
