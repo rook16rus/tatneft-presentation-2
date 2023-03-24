@@ -23,8 +23,19 @@
     }
   }
 
+  &__row-block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    margin-left: -0.8rem;
+    margin-bottom: -0.8rem;
+  }
+
   &__btn {
     margin-left: 0.8rem;
+    margin-bottom: 0.8rem;
+
+    white-space: nowrap;
 
     svg {
       display: none;

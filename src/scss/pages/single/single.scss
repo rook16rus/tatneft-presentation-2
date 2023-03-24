@@ -9,14 +9,16 @@
 
   &__tabs {
     display: flex;
+    flex-wrap: wrap;
     margin-right: -0.8rem;
+    margin-bottom: 4.4rem;
   }
 
   &__tab {
     @extend .tab;
 
     margin-right: 0.8rem;
-    margin-bottom: 5.2rem;
+    margin-bottom: 0.8rem;
   }
 
   &__tabs-contents {

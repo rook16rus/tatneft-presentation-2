@@ -104,5 +104,9 @@
 
   .features-card {
     width: auto;
+
+    * {
+      cursor: pointer;
+    }
   }
 }

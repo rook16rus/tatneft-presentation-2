@@ -3,26 +3,23 @@ import { primaryInput } from 'detect-it';
 
 export default () => {
   const gallery = document.querySelector(".gallery-container");
-
   if (!gallery) return;
+
+  const wrapper = gallery.querySelector('.swiper-wrapper');
   const cursor = document.querySelector(".js-fake-cursor");
 
   if (primaryInput === 'touch') return;
 
-  gallery.addEventListener('mousemove', event => {
-    // if (!tracking) return;
-    // console.log(event);
+  gallery.addEventListener('pointermove', e => {
     cursor.classList.add('visible');
-    gallery.style.setProperty('--x', event.clientX - gallery.getBoundingClientRect().left + 'px');
-    gallery.style.setProperty('--y', event.clientY - gallery.getBoundingClientRect().top + 'px');
-  });
+    gallery.style.setProperty('--x', e.clientX - gallery.getBoundingClientRect().left + 'px');
+    gallery.style.setProperty('--y', e.clientY - gallery.getBoundingClientRect().top + 'px');
+  }, true);
 
-  gallery.addEventListener('mouseenter', () => {
-    // tracking = true;
+  gallery.addEventListener('mouseenter', (e) => {
     cursor.classList.add('visible');
   });
-  gallery.addEventListener('mouseleave', () => {
-    // tracking = false;
+  gallery.addEventListener('mouse leave', (e) => {
     cursor.classList.remove('visible');
   });
 
