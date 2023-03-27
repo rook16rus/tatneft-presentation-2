@@ -28,10 +28,49 @@
     margin-bottom: 4rem;
   }
 
+  &__lead {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    min-height: 25rem;
+    max-width: 44rem;
+    padding: 2.4rem;
+    margin-top: auto;
+    margin-bottom: 4.8rem;
+
+    border-radius: 2.4rem;
+    background-repeat: repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+
+    color: var(--color-base01);
+
+    @include mq(sm) {
+      min-height: 18rem;
+      padding: 2rem;
+      margin-bottom: 4rem;
+
+      border-radius: 1.2rem;
+    }
+  }
+
+  &__lead-title {
+    font: var(--font-heading-4);
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+  }
+
+  &__lead-text {
+    font: var(--font-once-2);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+
   &__text {
     @extend .intro-text;
 
-    margin-top: auto;
     margin-bottom: 4.8rem;
 
     @include mq(sm) {
