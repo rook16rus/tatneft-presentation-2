@@ -18,4 +18,23 @@ header.header.fix-blocks.is-fixed
         +icon-mono('about-icon')
       button.header__btn.button(data-modal-heading data-path="presentation" data-modal-legend="Отправьте презентацию")
         span Отправить презентацию
-      button.header__burger
+      button.header__burger-button
+  .header__burger
+    .site-container
+      button.header__burger-close
+        +icon-mono("cross-icon")
+      ul.header__burger-list
+        li.header__burger-item
+          a.header__burger-link(href="#")
+            | О компании
+        li.header__burger-item
+          a.header__burger-link(href="#")
+            | Развитие бизнеса
+        li.header__burger-item
+          a.header__burger-link(href="#")
+            | Развитие качества SMC и BMC компаундов
+        li.header__burger-item
+          a.header__burger-link(href="#")
+            | Переработка композитных отходов
+      button.header__burger-presentation.button(data-modal-heading data-path="presentation" data-modal-legend="Отправьте презентацию")
+        span Отправить презентацию

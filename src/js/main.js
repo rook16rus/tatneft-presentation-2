@@ -23,6 +23,7 @@ import gallerySlider from "./helpers/gallerySlider";
 import galleryCursor from "./helpers/galleryCursor";
 import tabs from "./helpers/tabs";
 import introSlider from "./helpers/introSlider";
+import burger from "./helpers/burger";
 
 documenReady(() => {
   window.tatneft_api = { locoFlag: false, menuImages: false };
@@ -50,6 +51,7 @@ documenReady(() => {
   galleryCursor();
   tabs();
   introSlider();
+  burger();
 });
 
 
