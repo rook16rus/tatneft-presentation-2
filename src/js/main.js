@@ -68,4 +68,10 @@ window.addEventListener("load", () => {
       animateGraphic();
     }
   }
+
+  smoothScroll();
 });
+
+document.fonts.ready.then((res) => {
+  smoothScroll();
+})
